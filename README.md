@@ -1,5 +1,5 @@
 # Extraction of arguments from Thai article <br/> (การสกัดข้อความโต้แย้งจากบทความภาษาไทย)
-  In this project is intended for the use of machine learning (Machine learning) Create a model to identify the Major claim, claim and premise of the disputed text from the Thai article. In the preparation of this project, 500 Thai-language articles archives were used
+  In this project is intended for the use of machine learning (Machine learning) Create a model to identify claim and premise of the disputed text from the Thai article. In the preparation of this project, 500 Thai-language articles archives were used
 
 ### Web Application (argument-targer)
 https://github.com/pitiwatMIKE/project_web_argument_targer
@@ -8,28 +8,46 @@ https://github.com/pitiwatMIKE/project_web_argument_targer
 
 ```
 |__ create_dateset
-        |__ create_data_comment.ipynb/ --> ใช้สำหรับสร้าง Dataset ให้อยู่ในรูปแบบของ CoNLL-2002
+        |__ create_data_comment.ipynb/ -->  create a Dataset in the format of CoNLL
 |__ Dataset
-        |__ CoNLL2002-dataset
-        |__ data
-        |__ LAW
+        |__ CoNLL2002-dataset/ --> data in format CoNll
+               |__ comment-pos.conll
+               |__ comment.conll
+               |__ test_CONLL_BERT.txt
+               |__ train_CONLL_BERT.txt
+        |__ data/ --> Data in CoNll format saved with pickle
+               |__ comment-pos.data
+               |__ comment.data
+        |__ LAW/ --> Raw data for tagging claim and premise
+            |__ ...
 |__ Summarize
-        |__ summarize.ipynb/ --> ใช้สำหรับ plot plot graph เพื่อเปรยบเทียบความแม่นยำของ model แต่ละอัน
+        |__ summarize.ipynb/ --> Used for plot graphs to compare the accuracy of models.
 |__ thai2vec
-        |__ thai2vecNoSym.bin/ --> word_embeding สำหรับ model lstm, bilstm, bilstm-crf
-|__ train_model
+        |__ thai2vecNoSym.bin/ --> word_embeding for model lstm, bilstm, bilstm-crf
+|__ train_model/ --> Used for training each model.
         |__ mode_CRF
+              |__ Model_CRF.ipynb
         |__ model_BiLSTM
+              |__ model_BiLSTM.ipynb
         |__ model_BiLSTM-CRF
+              |__ model_BiLSTM-CRF.ipynb
         |__ model_LSTM
-        |__ wangchanbert_hugginface
-        |__ wangchanbert_simpletranformers
-|__ trained_model
+              |__ model_LSTM.ipynb
+        |__ wangchanbert_hugginface/ --> train use libraly tranformers
+              |__ colab_train_model.txt/ --> train wangchanbertบน colab
+              |__ use_model.ipynb
+              |__ wangchanberta.ipynb
+        |__ wangchanbert_simpletranformers/ --> train use libraly simpletranformers (recommend)
+              |__ colab_train_model.txt/ --> train wangchanberatบน colab
+              |__ evaluation.ipynb
+              |__ train_bert_lazy.ipynb
+              |__ use_pipline.ipynb
+|__ trained_model/ --> trained model
         |__ model_BiLSTM
         |__ model_BiLSTM-CRF
         |__ CRF
         |__ LSTM
-|__ use_model
+|__ use_model/ --> How to use a trained model
         |__ use_model_BiLSTM-CRF.ipynb
         |__ use_model_BiLSTM.ipynb
         |__ use_model_CRF.ipynb
