@@ -4,7 +4,6 @@ from pythainlp.tokenize import word_tokenize
 model_path = 'pitiwat/argument_wangchanberta2'
 tokenizer = AutoTokenizer.from_pretrained(model_path,  model_max_length=512)
 model = AutoModelForTokenClassification.from_pretrained(model_path)
-
 pipe = TokenClassificationPipeline(model=model, tokenizer=tokenizer)
 
 def predict(text):
@@ -17,12 +16,12 @@ def predict(text):
     for dict_pred in prediction:
         open_tag = f"<{dict_pred['entity_group'].lower()}>"
         close_tag = f"</{dict_pred['entity_group'].lower()}>"
-        if open_tag == "<o>":
-            continue
         group_word = dict_pred['word']
 
         if group_word.strip() == "":
             text_pred += group_word
+        elif open_tag == "<o>":
+            text_pred += ''.join(group_word.split(" "))
         else:
             group_word = ''.join(group_word.split(" "))
             text_pred += open_tag + group_word + close_tag
