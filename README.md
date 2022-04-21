@@ -1,3 +1,65 @@
+# Extraction of arguments from Thai article <br/> (การสกัดข้อความโต้แย้งจากบทความภาษาไทย)
+  In this project is intended for the use of machine learning (Machine learning) Create a model to identify the Major claim, claim and premise of the disputed text from the Thai article. In the preparation of this project, 500 Thai-language articles archives were used
+
+### Web Application (argument-targer)
+https://github.com/pitiwatMIKE/project_web_argument_targer
+
+## Project structure
+
+```
+|__ create_dateset
+        |__ create_data_comment.ipynb/ --> ใช้สำหรับสร้าง Dataset ให้อยู่ในรูปแบบของ CoNLL-2002
+|__ Dataset
+        |__ CoNLL2002-dataset
+        |__ data
+        |__ LAW
+|__ Summarize
+        |__ summarize.ipynb/ --> ใช้สำหรับ plot plot graph เพื่อเปรยบเทียบความแม่นยำของ model แต่ละอัน
+|__ thai2vec
+        |__ thai2vecNoSym.bin/ --> word_embeding สำหรับ model lstm, bilstm, bilstm-crf
+|__ train_model
+        |__ mode_CRF
+        |__ model_BiLSTM
+        |__ model_BiLSTM-CRF
+        |__ model_LSTM
+        |__ wangchanbert_hugginface
+        |__ wangchanbert_simpletranformers
+|__ trained_model
+        |__ model_BiLSTM
+        |__ model_BiLSTM-CRF
+        |__ CRF
+        |__ LSTM
+|__ use_model
+        |__ use_model_BiLSTM-CRF.ipynb
+        |__ use_model_BiLSTM.ipynb
+        |__ use_model_CRF.ipynb
+        |__ use_model_LSTM.ipynb
+|__ .gitignore
+|__ requirements.txt --> file for managing packages requirements
+```
+
+# Installation
+Creating virtual environments
+```
+sudo apt update
+sudo apt install python3.8
+python3.8 -m venv env_argument
+```
+Activating a virtual environment
+```
+Activating a virtual environment
+```
+clone project
+```
+git clone https://github.com/pitiwatMIKE/project_argument.git
+```
+
+install requiments.txt
+```
+cd project_argument
+pip install -r requirements.txt
+```
+    
 # Summarize
 | Model| F1(Claim) | F1(Premise) | Accuracy |
 |-------| ------- | :---------: | :------: |
@@ -14,17 +76,12 @@
 |BiLSTM| 0.76 | 0 .58| 0.59 | 0.67 | 0.63 |
 |BiLSTM-CRF| 0.41 | 0.34 | 0.32 | 0.48 | 0.41 |
 |Wangchanberta| 0.75 | 0.64 | 0.65 | 0.72 | 0.65 |
-<br />
-<br />
 
-# Bar Plot
+## Bar Plot
 ![sentence](https://user-images.githubusercontent.com/68042822/163938892-591039d1-f0da-4a3d-bf82-a65549525b1e.png)
 ![word](https://user-images.githubusercontent.com/68042822/163939766-3c48e769-49a8-41ed-9cb9-e283b5665b79.png)
 
-<br />
-<br />
-
-# CRF
+## CRF
 | Accuracy | 0.59 |
 | :------: | :------: |
 
@@ -47,7 +104,7 @@
 |macro avg| 0.40 | 0.31 | 0.35 | 352 |
 |weighted avg| 0.40 | 0.31 | 0.35 | 352 |
 
-# LSTM
+## LSTM
 | Accuracy | 0.60 |
 | :------: | :------: |
 
@@ -71,7 +128,7 @@
 |weighted avg| 0.12 | 0.21 | 0.15 | 315 |
 
 
-# BiLSTM
+## BiLSTM
 | Accuracy | 0.63 |
 | :------: | :------: |
 
@@ -94,7 +151,7 @@
 |macro avg| 0.14 | 0.23 | 0.17 | 315 |
 |weighted avg| 0.14 | 0.23 | 0.17 | 315 |
 
-# BiLSTM-CRF
+## BiLSTM-CRF
 | Accuracy | 0.41 |
 | :------: | :------: |
 
@@ -117,7 +174,7 @@
 |macro avg| 0.16 | 0.21 | 0.18 | 331 |
 |weighted avg| 0.16 | 0.212 | 0.18 | 331 |
 
-# Wangchanberta
+## Wangchanberta
 | Accuracy | 0.65 |
 | :------: | :------: |
 
