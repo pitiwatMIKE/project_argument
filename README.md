@@ -47,14 +47,13 @@ python3.8 -m venv env_argument
 ```
 Activating a virtual environment
 ```
-Activating a virtual environment
+source env_argument/bin/activate
 ```
 clone project
 ```
 git clone https://github.com/pitiwatMIKE/project_argument.git
 ```
-
-install requiments.txt
+install packages requirements
 ```
 cd project_argument
 pip install -r requirements.txt
