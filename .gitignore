@@ -1,9 +1,7 @@
 *.ipynb_checkpoints
 *ner-2.pt.*
 *ner-lstm.pt.*
-*thai2vecNoSym.bin
 *__pycache__
-thai2vec
 *.gz
 **/LST20_Corpus
 ._LST20_Corpus
