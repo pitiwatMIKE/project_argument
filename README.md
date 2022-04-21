@@ -7,6 +7,8 @@ https://github.com/pitiwatMIKE/project_web_argument_targer
 ## Project structure
 
 ```
+|__ Summarize
+        |__ summarize.ipynb/ --> Used for plot graphs to compare the accuracy of models.
 |__ create_dateset
         |__ create_data_comment.ipynb/ -->  create a Dataset in the format of CoNLL
 |__ Dataset
@@ -20,8 +22,6 @@ https://github.com/pitiwatMIKE/project_web_argument_targer
                |__ comment.data
         |__ LAW/ --> Raw data for tagging claim and premise
             |__ ...
-|__ Summarize
-        |__ summarize.ipynb/ --> Used for plot graphs to compare the accuracy of models.
 |__ thai2vec
         |__ thai2vecNoSym.bin/ --> word_embeding for model lstm, bilstm, bilstm-crf
 |__ train_model/ --> Used for training each model.
