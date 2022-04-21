@@ -34,11 +34,11 @@ https://github.com/pitiwatMIKE/project_web_argument_targer
         |__ model_LSTM
               |__ model_LSTM.ipynb
         |__ wangchanbert_hugginface/ --> train use libraly tranformers
-              |__ colab_train_model.txt/ --> train wangchanbertบน colab
+              |__ colab_train_model.txt/ --> Train on colab to use Colab GPUs.
               |__ use_model.ipynb
               |__ wangchanberta.ipynb
         |__ wangchanbert_simpletranformers/ --> train use libraly simpletranformers (recommend)
-              |__ colab_train_model.txt/ --> train wangchanberatบน colab
+              |__ colab_train_model.txt/ --> Train on colab to use Colab GPUs.
               |__ evaluation.ipynb
               |__ train_bert_lazy.ipynb
               |__ use_pipline.ipynb
