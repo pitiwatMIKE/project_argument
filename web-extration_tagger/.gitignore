@@ -1,4 +1,0 @@
-*.ipynb_checkpoints
-*ner-lstm.pt.*
-*thai2vecNoSym.bin
-*__pycache__
