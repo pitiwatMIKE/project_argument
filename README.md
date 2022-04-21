@@ -11,7 +11,7 @@ https://github.com/pitiwatMIKE/project_web_argument_targer
         |__ summarize.ipynb/ --> Used for plot graphs to compare the accuracy of models.
 |__ create_dateset
         |__ create_data_comment.ipynb/ -->  create a Dataset in the format of CoNLL
-|__ Dataset
+|__ dataset
         |__ CoNLL2002-dataset/ --> data in format CoNll
                |__ comment-pos.conll
                |__ comment.conll
