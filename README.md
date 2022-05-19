@@ -213,3 +213,14 @@ pip install -r requirements.txt
 |micor avg| 0.37 | 0.56 | 0.44 | 309 |
 |macro avg| 0.38 | 0.56 | 0.45 | 309 |
 |weighted avg| 0.38 | 0.56 | 0.45 | 309 |
+
+# Reference
+https://python3.wannaphong.com/2018/12/named-entity-recognition-ner-pythainlp.html
+https://sklearn-crfsuite.readthedocs.io/en/latest/index.html
+https://github.com/wannaphong/thai-ner
+https://pytorch.org/tutorials/beginner/nlp/advanced_tutorial.html
+https://github.com/achernodub/targer
+https://colab.research.google.com/drive/1CWamaQH1Lgd7mSZ0UZ4jx2AUMAGDpsfq?usp=sharing
+https://huggingface.co/airesearch/wangchanberta-base-att-spm-uncased
+
+
