@@ -1,5 +1,4 @@
 # Extraction of arguments from Thai article <br/> (การสกัดข้อความโต้แย้งจากบทความภาษาไทย)
-  In this project is intended for the use of machine learning (Machine learning) Create a model to identify claim and premise of the disputed text from the Thai article. In the preparation of this project, 500 Thai-language articles archives were used
 
 ### Web Application (argument-targer)
 https://github.com/pitiwatMIKE/project_web_argument_targer
